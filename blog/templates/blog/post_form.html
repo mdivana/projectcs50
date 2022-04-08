@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-    Register
+    Post Form
 {% endblock %}
 
 {% block content %}
@@ -10,17 +10,12 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Register Now</legend>
+                <legend class="border-bottom mb-4">Create New Post</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" style="margin-top: 5px;" type="submit">Register</button>
+                <button class="btn btn-outline-info" style="margin-top: 15px;" type="submit">Post</button>
             </div>
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
-            </small>
-        </div>
     </div>
 {% endblock content %}
