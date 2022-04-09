@@ -19,3 +19,14 @@ class Post(models.Model):
         return reverse('post-detail', kwargs={'pk': self.pk})
 
 
+class Comment(models.Model):
+    name = models.CharField(max_length=50)
+    content = models.TextField() 
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    created = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ('-created',)
+
+    def __str__(self):
+        return 'Comment by {}'.format(self.name)
