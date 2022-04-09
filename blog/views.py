@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Post
-
+from .models import Post, Comment
+from django import forms
 
 def home(request):
     context = {
@@ -22,6 +22,7 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -56,3 +57,9 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'content')
