@@ -16,9 +16,9 @@
 
     </head>
 
-    <body style="background-color: #00ADB5;">
+    <body style="background-color: #222831;">
         <header class="site-header">
-          <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"; style="color: #222831">
+          <nav class="navbar navbar-expand-md navbar-light fixed-top"; style="background-color: #00ADB5">
             <div class="container">
               <a class="navbar-brand me-4" href="{% url 'blog-home' %}">CS50 Blog</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,12 +28,12 @@
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
-                        <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
-                        <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'post-create' %}">New Post</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'logout' %}">Logout</a>
                     {% else %}
-                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                        <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'login' %}">Login</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'register' %}">Register</a>
                     {% endif %}
                 </div>
               </div>
