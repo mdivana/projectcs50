@@ -8,4 +8,7 @@ This web app is created for CS50 Introduction to Computer Science course final p
 * django-crispy-forms
 * Pillow
 
-##### 
+##### Install those requirements
+```bash
+  pip install -r requirements.txt
+```
