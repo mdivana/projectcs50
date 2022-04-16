@@ -11,7 +11,7 @@ Media folder is where profile pictures are stored.
 
 Project folder is nearly unchanged after django configuration, just added some paths in urls.py file and added some lines in settings.py
 
-Users folder is where user functionality is. I made it as a separate folder so that it is easy to look at only user functionality and not site functionality and also for later use in other projects.
+Users folder is where user functionality is. I made it as a separate folder so that it is easy to distinguish and also for later use in other projects.
 
 sqlite3 database is for storing user data and posts.
 
