@@ -1,5 +1,4 @@
 # cs50 blog
-#### Video Demo:  <https://youtu.be/Dy8A-iey_GQ>
 #### Description:
 This web app is created for CS50 Introduction to Computer Science course final project. 
 It lets you share your stories about various subjects with other users. 
